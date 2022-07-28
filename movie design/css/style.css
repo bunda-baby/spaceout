@@ -1,0 +1,315 @@
+/* 
+ * Main style definitions for the website.
+ */
+
+ /* General body styling, body set up as a grid container */
+
+ *{
+    margin: 0%;
+ }
+
+ body {
+	
+	font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+.navbar{
+width: 100pw;
+height: 100px;
+background-color: black;
+position: sticky;
+}
+.navbar-cont{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    height: 80%;
+    color:gray;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+.logo-cont{
+    flex: 1;
+}
+.logo{
+    font-size: 30px;
+
+}
+.menu-cont{
+    flex: 6;
+}
+.menu-list{
+    display:flex;
+    list-style:none;
+    text-decoration: none;
+}
+.menu-list > a {
+    color: gray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-decoration: none;
+  }
+  
+.menu-list a:hover{
+    background-color:red;
+}
+.menu-list-item{
+    margin: 40px;
+    font-size: 25px;
+}
+.pro-cont{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    padding: 2%;
+    
+    
+}
+.profile-text-cont{
+    margin: 0 5%;
+
+    
+}
+.profile-pic{
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.toggle{
+    width: 40px;
+    height: 25px;
+    background-color: whitesmoke;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: relative;
+
+}
+.toggle-icon{
+    padding-left: 1%;
+    color: goldenrod;
+}
+.toggle-ball{
+width: 18px;
+height: 18px;
+background-color: black;
+position: absolute;
+right: 1px;
+border-radius: 50%;
+cursor: pointer;
+transition: 1s ease all;
+}
+
+.sidebar{
+    width: 70px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    }
+    .side-icon{
+        color: grey;
+        font-size: 30px;
+        margin-bottom: 100px;
+        
+}
+    .cont{
+        background-color: black;
+        min-height: 100vh;
+        min-width: 10vh;
+        color: gray;
+    }
+    .content-cont{
+        margin-left: 70px;
+    }
+    .featured-movie{
+        height: 70vh;
+        padding:70px;
+        
+    }
+    .feat-title{
+        width:450px;
+    }
+    .feat-discrip{
+       font-size: 20px;
+       width: 700px; 
+       color: whitesmoke;
+       margin: 50px 0;
+    }
+    .feat-button{
+        color: black;
+        background-color: red;
+        padding:10px 20px;
+        border-radius: 15px;
+        border: 10px;
+        outline: 10px;
+        cursor: pointer;
+    }
+    .movie-list-cont{
+        padding: 5px;
+    }
+    .movie-list-wrapper{
+        position: relative;
+        overflow: hidden;
+        
+    }
+    .movie-list{
+       align-items: center; 
+       height: 200px;
+       display: flex;
+       transform: translateX(0);
+       transition: all 1s ease-in-out;
+
+    }
+    .movie-item{
+        margin-right: 20px;
+        position: relative;
+       
+    }
+    .movie-item:hover .movie-item-img{
+      transform: scale(1.2);
+      margin: 0 20px;
+      opacity: 0.3;
+    }
+    .movie-item:hover .movie-item-title,
+    .movie-item:hover .movie-item-desc,
+    .movie-item:hover .movie-item-button{
+        opacity: 1;
+    }
+    .movie-item-img{
+        width:260px;
+        height:200px;
+        object-fit: contain;
+        transition: all 1s ease-in;
+        border-radius: 120px;
+    }
+    .movie-item-title{
+        background-color: black;
+        padding: 0 10px;
+        font-size: 20px;
+        font-weight: bolder;
+        color: grey;
+        position: absolute;
+        top: 25%;
+        left: 1px;
+        opacity: 0;
+        transition: 1s all ease-in-out;
+    }
+    .movie-item-desc{
+        background-color:black;
+        padding: 10px;
+        font-size: 10px;
+        color: gray;
+        position: absolute;
+        top: 60%;
+        left: 1px;
+        opacity: 0;
+        transition: 1s all ease-in-out;
+    }
+    .movie-item-button{
+        color: black;
+        background-color: red;
+        padding:10px;
+        border-radius: 15px;
+        border: 10px;
+        outline: 10px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 10px;
+        left: 8px;
+        opacity: 0;
+        transition: 1s all ease-in-out;
+    }
+    .arrow{
+        font-size: 130px;
+        position: absolute;
+        top: 20%;
+        right: 0%;
+        color: blueviolet;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+   
+    .arrow:hover{
+        opacity: 1;
+    }
+    .cont.active {
+        background-color: whitesmoke;
+      }
+      
+      .movie-list-title.active{
+        color: black;
+      }
+      
+      .navbar.active {
+        background-color: white;
+      
+        color: black;
+      }
+      
+      .sidebar.active{
+          background-color: white;
+      }
+      
+      .side-icon.active{
+          color: black;
+      }
+      
+      .toggle.active{
+          background-color: black;
+      }
+      
+      .toggle-ball.active{
+          background-color: white;
+          transform: translateX(-20px);
+      }
+      .up-cont{
+        background-color: black;
+        min-height: 75vh;
+      }
+      .up-list{
+        display:flex;
+        align-items: center;
+        height: 500px;
+        width: 500px;
+      }
+      .up-img{
+        height: 60vh;
+        width: 45vh;
+        object-fit: cover;
+        padding-left: 25%;
+        padding-top: 15%;
+      }
+      .up-item{
+        margin-right: 37px;
+        position: relative;
+      }
+      .up-button{
+        color: black;
+        background-color: red;
+        padding:20px;
+        border-radius: 15px;
+        border: 10px;
+        outline: 10px;
+        cursor: pointer;
+        position: absolute;
+        top: 105%;
+        left: 280px;
+
+      }
+      .up-cont.active{
+        background-color: whitesmoke;
+      }
+    @media only screen and (max-width: 870px) {
+        .menu-cont{
+            display:none;
+        }
+    }
